@@ -20,4 +20,10 @@ This could be a simple bash script or c or python or whatever that just every fe
 
 ---
 ## External resources
-I found [this](https://tech.michaelaltfield.net/2020/01/02/buskill-laptop-kill-cord-dead-man-switch/) for Linux. 
+
+I found [this](https://tech.michaelaltfield.net/2020/01/02/buskill-laptop-kill-cord-dead-man-switch/) article for Linux.  
+USB-C Magnet 90˚ [Adapter](https://www.amazon.com/Magnetic--Connector-Quick-Charge/dp/B07MMKZ8XD/ref=sr_1_3?crid=1FY699KGN2YH9&keywords=usb-c+magnetic&qid=1578008301&sprefix=usb-c+mag%2Caps%2C166&sr=8-3).  
+Tiny USB-C [drive](https://www.amazon.com/SanDisk-Ultra-Type-C-Flash-SDCZ450-016G-G46/dp/B01BUSMYHC/ref=sxin_3_osp5-33b4c257_cov?ascsubtag=33b4c257-b57e-46cb-9f6d-0f9cfe520b4f&creativeASIN=B01BUSMYHC&crid=3RWB7TZ32FVGK&cv_ct_cx=usb-c+thumb+drive&cv_ct_id=amzn1.osp.33b4c257-b57e-46cb-9f6d-0f9cfe520b4f&cv_ct_pg=search&cv_ct_wn=osp-search&keywords=usb-c+thumb+drive&linkCode=oas&pd_rd_i=B01BUSMYHC&pd_rd_r=26cb7ef2-d6ff-484d-b2bf-28d7cf58c2ca&pd_rd_w=kYWcI&pd_rd_wg=0aPu5&pf_rd_p=eb3e5cda-5ec9-4d94-919d-310a5d641b8b&pf_rd_r=RCBWS4SD3EKSKD4KJ7XZ&qid=1578008333&sprefix=usb-c+thumb%2Caps%2C164&tag=androidcentralosp-20).  
+
+ - [] Small enough to fit into magnet adapter without tail?
+ - [] Could the plastic housing be removed to make it even smaller?
