@@ -27,3 +27,5 @@ Tiny USB-C [drive](https://www.amazon.com/SanDisk-Ultra-Type-C-Flash-SDCZ450-016
 
  - [] Small enough to fit into magnet adapter without tail?
  - [] Could the plastic housing be removed to make it even smaller?
+ - [] Perhaps remove the drive housing and just do a resin dip to make it as small as possible.
+ - [] Final solution needs a lanyard attachment.
