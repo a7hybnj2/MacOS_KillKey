@@ -1,7 +1,6 @@
 #!/usr/bin/env python
-device_uuid = "*your device uuid*"
+device_uuid = "*STEP 4-1*"
 the_call = "system_profiler"
 the_arg = "SPUSBDataType"
 the_command = "system_profiler SPUSBDataType"
-logout = "launchctl bootout user/$(id -u *username*)"
-sleep_duration = 1
+logout = "launchctl bootout user/$(id -u *STEP 4-2*)"

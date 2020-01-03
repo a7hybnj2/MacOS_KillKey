@@ -6,14 +6,14 @@
     <string>com.user.killkeyinterval</string>
     <key>ProgramArguments</key>
     <array>
-        <string>*path to your python bin mine is:*/usr/local/opt/python/bin/python3.7</string>
-        <string>*path to where you have this repo*/Users/*UNAME*/.MacOS_KillKey/KillKey.py</string>
+        <string>*EDIT_THIS STEP 6-1*</string>
+        <string>*EDIT_THIS STEP 6-2*</string>
     </array>
     <key>StandardOutPath</key>
-    <string>*where you want the log file to be*</string>
+    <string>*EDIT_THIS STEP 6-3*</string>
     <key>StandardErrorPath</key>
-    <string>*where you want the log file to be*</string>
+    <string>*EDIT_THIS STEP 6-4*</string>
     <key>StartInterval</key>
-    <integer>*The duration in seconds between runs*</integer>
+    <integer>*EDIT_THIS STEP 6-5*</integer>
 </dict>
 </plist>
