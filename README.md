@@ -40,3 +40,13 @@ I would be very happy if someone was interested in taking a look at this and sug
 
 # Warning
 Once you have this installed you will have to have the 'key' installed to log into the machine. If you don't then as soon as you log in you will get logged back out. If you need to stop this you can `launchctl stop com.user.killkeyinterval` and/or `launchctl unload com.user.killkeyinterval` if you don't want it run again.
+
+# TODO:
+[] Does the plist prevent sleep?  
+[] Would [Monitoring a Directory](https://developer.apple.com/library/archive/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/CreatingLaunchdJobs.html#//apple_ref/doc/uid/10000172i-SW7-BCIEDDBJ) be a better option?  
+    - /dev/disk#
+    - /Volume/mountpoint  
+[] Add an off option  
+    - Since the script is being run over and over it could check for a switch  
+        - Maybe a file on the desktop or something  
+[] Make a wiki to breakup the READMEs
