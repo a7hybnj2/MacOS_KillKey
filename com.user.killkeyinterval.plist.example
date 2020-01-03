@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.user.killkeyinterval</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>*path to your python bin mine is:*/usr/local/opt/python/bin/python3.7</string>
+        <string>*path to where you have this repo*/Users/*UNAME*/.MacOS_KillKey/KillKey.py</string>
+    </array>
+    <key>StandardOutPath</key>
+    <string>*where you want the log file to be*</string>
+    <key>StandardErrorPath</key>
+    <string>*where you want the log file to be*</string>
+    <key>StartInterval</key>
+    <integer>*The duration in seconds between runs*</integer>
+</dict>
+</plist>
