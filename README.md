@@ -41,15 +41,38 @@ I would be very happy if someone was interested in taking a look at this and sug
 # Warning
 Once you have this installed you will have to have the 'key' installed to log into the machine. If you don't then as soon as you log in you will get logged back out. If you need to stop this you can `launchctl stop com.user.killkeyinterval` and/or `launchctl unload com.user.killkeyinterval` if you don't want it run again.
 
+# Notes:
+This is not a ['USB KILL'](https://usbkill.com/). This script will do no damage to your computer*  
+    - * haven't tested what would happen if you lost the 'key'  
+This is not a ['BAD USB'](https://maltronics.com/collections/malduinos) type device.
+
+# FAQ:
+- Can I use the usb drive as a drive?
+    - Technically yes but not recommended.
+- What happens if I lose my key?
+    - Unknown, its **untested**.
+- Is there recommended hardware?
+    - There will be a wiki page on hardware.
+
 # TODO:
- - [ ] Does the plist prevent sleep?  
+- [ ] Does the plist prevent sleep?  
     - `pmset -g assertions` doesn't seem like it  
- - [ ] Would [Monitoring a Directory](https://developer.apple.com/library/archive/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/CreatingLaunchdJobs.html#//apple_ref/doc/uid/10000172i-SW7-BCIEDDBJ) be a better option?  
+- [ ] Would [Monitoring a Directory](https://developer.apple.com/library/archive/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/CreatingLaunchdJobs.html#//apple_ref/doc/uid/10000172i-SW7-BCIEDDBJ) be a better option?  
     - /dev/disk#
         - This could be good if you could somehow extrapolate the disk location from the UUID.  
     - /Volume/mountpoint
         - I don't like this option  
- - [ ] Add an off option  
+- [ ] Add an off option  
     - Since the script is being run over and over it could check for a switch  
         - Maybe a file on the desktop or something  
- - [ ] Make a wiki to breakup the READMEs
+- [ ] Make a wiki to breakup the READMEs
+    - Hardware suggestions page
+    - Installation page
+    - Configurables
+- [ ] config.py automatically assigning username
+    - could easily get `whoami` into a var to build the logoff command with
+- [ ] Can the plist be loaded from a `ln`?
+    - This would allow the plist to then live in the repo directory
+- [ ] Is there any long term damage from having the log files?
+    - Should the automatically cleanup?
+- [ ] Could installation be turned into a script or makefile?
