@@ -1,5 +1,6 @@
 #Project Specific
 config.py
+__pycache__
 
 # ---> macOS
 # General
