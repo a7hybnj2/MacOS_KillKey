@@ -41,3 +41,7 @@ Tiny USB-C [drive](https://www.amazon.com/SanDisk-Ultra-Type-C-Flash-SDCZ450-016
  - [] Could the plastic housing be removed to make it even smaller?
  - [] Perhaps remove the drive housing and just do a resin dip to make it as small as possible.
  - [] Final solution needs a lanyard attachment.
+
+ ---
+ ## Install
+ The file config_example.py needs to be copied to config.py and the internal values changed. You need to find the UUID of the device you plan on using as the \*key\*.
