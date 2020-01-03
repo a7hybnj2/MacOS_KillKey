@@ -44,7 +44,7 @@ Once you have this installed you will have to have the 'key' installed to log in
 # TODO:
 [] Does the plist prevent sleep?  
 [] Would [Monitoring a Directory](https://developer.apple.com/library/archive/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/CreatingLaunchdJobs.html#//apple_ref/doc/uid/10000172i-SW7-BCIEDDBJ) be a better option?  
-    - /dev/disk#
+    - /dev/disk#  
     - /Volume/mountpoint  
 [] Add an off option  
     - Since the script is being run over and over it could check for a switch  
