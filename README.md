@@ -3,14 +3,26 @@ A script that watches for a UUID to be no longer present and locks, logs out, or
 
 This is just a placeholder for my idea and notes.
 
+
+---
+## Check for Device
 `system_profiler SPUSBDataType | grep *device uuid*`  
 `ioreg -p IOUSB | grep *device name*`
 
 This could be a simple bash script or c or python or whatever that just every few seconds checks for the device. If its not there then:  
+
+---
+## Security Lock
 `shutdown -r now`  
 [] TEST: Will the command below invoke 'FileVault' when logging back in.  
 [] TEST: Will it save previous session: "Reopen windows when logging back in"  
 `sudo launchctl bootout user/$(id -u <username>)`  
+
+---
+## Auto Start
+Could just be a login item under user account  
+[launchd](https://stackoverflow.com/questions/6442364/running-script-upon-login-mac/13372744#13372744), launchctl, .plist  
+[] Would the script be able to check, and lock if non-sudo start?
 
 ---
 ## Concerns
