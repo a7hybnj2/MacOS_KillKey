@@ -14,8 +14,14 @@ This could be a simple bash script or c or python or whatever that just every fe
 ---
 ## Security Lock
 `shutdown -r now`  
-[] TEST: Will the command below invoke 'FileVault' when logging back in.  
-[] TEST: Will it save previous session: "Reopen windows when logging back in"  
+[X] TEST: Will the command below invoke 'FileVault' when logging back in.  
+
+ - No   
+
+[X] TEST: Will it save previous session: "Reopen windows when logging back in"  
+
+ - Yes  
+
 `sudo launchctl bootout user/$(id -u <username>)`  
 
 ---
