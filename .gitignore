@@ -2,6 +2,7 @@
 config.py
 __pycache__
 *.plist
+*.log
 
 # ---> macOS
 # General
