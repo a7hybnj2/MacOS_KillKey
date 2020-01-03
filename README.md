@@ -16,7 +16,7 @@ This could be a simple bash script or c or python or whatever that just every fe
 `shutdown -r now`  
 [X] TEST: Will the command below invoke 'FileVault' when logging back in.  
 
- - No   
+ - No. Well, I just did a tradition logout via menu and that also doesn't appear to reinvoke FileVault. And by reinvoke I mean see the slider when you first logon that appears to be the filesystem doing its fileVault thing.
 
 [X] TEST: Will it save previous session: "Reopen windows when logging back in"  
 
@@ -28,7 +28,11 @@ This could be a simple bash script or c or python or whatever that just every fe
 ## Auto Start
 Could just be a login item under user account  
 [launchd](https://stackoverflow.com/questions/6442364/running-script-upon-login-mac/13372744#13372744), launchctl, .plist  
-[] Would the script be able to check, and lock if non-sudo start?
+[] Would the script be able to check, and lock if non-sudo start?  
+
+[Running a Job Periodically](https://developer.apple.com/library/archive/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/CreatingLaunchdJobs.html#//apple_ref/doc/uid/10000172i-SW7-BCIEDDBJ)  
+
+ - this may be better than a while loop with sleep
 
 ---
 ## Concerns

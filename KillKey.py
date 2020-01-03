@@ -8,4 +8,4 @@ while 1:
     else:
         print("NOT FOUND")
         #os.system(logout) #this logs you out but doesn't reinit fileVault
-    sleep(5)
+    sleep(sleep_duration)
