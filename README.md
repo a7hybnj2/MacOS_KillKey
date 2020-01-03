@@ -53,8 +53,8 @@ This is not a ['BAD USB'](https://maltronics.com/collections/malduinos) type dev
     - Unknown, its **untested**.
 - Is there recommended hardware?
     - There will be a wiki page on hardware.
-- Does this kill my git gpg-key
-    - It seems to mess it up somehow. Probabley because of the 'FORCE' logout.
+- Does this cause: `error: gpg failed to sign the data`?
+    - It seems to mess it up somehow. Probably because of the 'FORCE' logout.
     - Run `gpgconf --kill gpg-agent` and it should reload and work again.
 
 # TODO:
