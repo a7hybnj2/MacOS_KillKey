@@ -45,3 +45,7 @@ Tiny USB-C [drive](https://www.amazon.com/SanDisk-Ultra-Type-C-Flash-SDCZ450-016
  ---
  ## Install
  The file config_example.py needs to be copied to config.py and the internal values changed. You need to find the UUID of the device you plan on using as the \*key\*.
+
+ ---
+ ## Make device
+ I took an old flash drive and just did a `diskutil eraseDisk free KillKey /dev/disk#`. This should make a drive that doesn't mount when plugged in. So you will not get a "improperly ejected disk" warning when you unplug it.
