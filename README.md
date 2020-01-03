@@ -53,6 +53,9 @@ This is not a ['BAD USB'](https://maltronics.com/collections/malduinos) type dev
     - Unknown, its **untested**.
 - Is there recommended hardware?
     - There will be a wiki page on hardware.
+- Does this kill my git gpg-key
+    - It seems to mess it up somehow. Probabley because of the 'FORCE' logout.
+    - Run `gpgconf --kill gpg-agent` and it should reload and work again.
 
 # TODO:
 - [ ] Does the plist prevent sleep?  
@@ -79,3 +82,5 @@ This is not a ['BAD USB'](https://maltronics.com/collections/malduinos) type dev
 - [ ] Branch the current project and go back to a 'keep alive' plist
     - The interval plist doesn't run quickly enough
     - [ ] Go back to a while loop with delay
+- [ ] ISSUE: it appears when the computer falls asleep it will trigger the logout event.
+    - I don't know if it is a certain duration after maybe locking. Where the script could check to see if computer is locked and stop running script?
