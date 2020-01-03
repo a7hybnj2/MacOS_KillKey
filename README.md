@@ -76,3 +76,6 @@ This is not a ['BAD USB'](https://maltronics.com/collections/malduinos) type dev
 - [ ] Is there any long term damage from having the log files?
     - Should the automatically cleanup?
 - [ ] Could installation be turned into a script or makefile?
+- [ ] Branch the current project and go back to a 'keep alive' plist
+    - The interval plist doesn't run quickly enough
+    - [ ] Go back to a while loop with delay
