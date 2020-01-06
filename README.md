@@ -1,6 +1,8 @@
 # KillKey
 This project allows you to have a physical 'key' connected to your computer. When that key is removed the computer will quickly logout keeping your data safe.
 
+beep
+
 ## Contributing
 I would be very happy if someone was interested in taking a look at this and suggesting improvements. This is one of my first python projects and is my first time using plists to start scripts.
 
