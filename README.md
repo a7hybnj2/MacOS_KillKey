@@ -49,9 +49,10 @@ Once you have this installed you will have to have the 'key' installed to log in
 
 # Notes:
 
-This is not a ['USB KILL'](https://usbkill.com/). This script will do no damage to your computer*  
- - * haven't tested what would happen if you lost the 'key'  
-This is not a ['BAD USB'](https://maltronics.com/collections/malduinos) type device.
+This is not a ['USB KILL'](https://usbkill.com/). This script will do no damage to your computer\*
+
+- - haven't tested what would happen if you lost the 'key'  
+    This is not a ['BAD USB'](https://maltronics.com/collections/malduinos) type device.
 
 # FAQ:
 
@@ -67,6 +68,7 @@ This is not a ['BAD USB'](https://maltronics.com/collections/malduinos) type dev
 
 # TODO:
 
+- [ ] Remove the startup plists. This can easily be started another way when the user wants the functionality. It could be an app or hot key or a number of other options.
 - [ ] Does the plist prevent sleep?
   - `pmset -g assertions` doesn't seem like it
 - [ ] Would [Monitoring a Directory](https://developer.apple.com/library/archive/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/CreatingLaunchdJobs.html#//apple_ref/doc/uid/10000172i-SW7-BCIEDDBJ) be a better option?
