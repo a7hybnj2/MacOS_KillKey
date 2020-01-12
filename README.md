@@ -43,55 +43,56 @@ I would be very happy if someone was interested in taking a look at this and sug
 9. Logout
 10. Login
 
-# Warning
+## Warning
 
 Once you have this installed you will have to have the 'key' installed to log into the machine. If you don't then as soon as you log in you will get logged back out. If you need to stop this you can `launchctl stop com.user.killkeyinterval` and/or `launchctl unload com.user.killkeyinterval` if you don't want it run again.
 
-# Notes:
+## Notes
 
 This is not a ['USB KILL'](https://usbkill.com/). This script will do no damage to your computer\*
 
-- - haven't tested what would happen if you lost the 'key'  
+- haven't tested what would happen if you lost the 'key'  
     This is not a ['BAD USB'](https://maltronics.com/collections/malduinos) type device.
 
-# FAQ:
+## FAQ
 
 - Can I use the usb drive as a drive?
-  - Technically yes but not recommended.
+	- Technically yes but not recommended.
 - What happens if I lose my key?
-  - Unknown, its **untested**.
+	- Unknown, its **untested**.
 - Is there recommended hardware?
-  - There will be a wiki page on hardware.
+	- There will be a wiki page on hardware.
 - Does this cause: `error: gpg failed to sign the data`?
-  - It seems to mess it up somehow. Probably because of the 'FORCE' logout.
-  - Run `gpgconf --kill gpg-agent` and it should reload and work again.
+	- It seems to mess it up somehow. Probably because of the 'FORCE' logout.
+	- Run `gpgconf --kill gpg-agent` and it should reload and work again.
 
-# TODO:
+## TODO
 
+- [ ] Maybe an existing utility like fswatch could be used to monitor the filesystem.
 - [ ] Remove the startup plists. This can easily be started another way when the user wants the functionality. It could be an app or hot key or a number of other options.
 - [ ] Does the plist prevent sleep?
-  - `pmset -g assertions` doesn't seem like it
+	- `pmset -g assertions` doesn't seem like it
 - [ ] Would [Monitoring a Directory](https://developer.apple.com/library/archive/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/CreatingLaunchdJobs.html#//apple_ref/doc/uid/10000172i-SW7-BCIEDDBJ) be a better option?
-  - /dev/disk#
-    - This could be good if you could somehow extrapolate the disk location from the UUID.
-  - /Volume/mountpoint
-    - I don't like this option
+	- /dev/disk#
+	- This could be good if you could somehow extrapolate the disk location from the UUID.
+	- /Volume/mount-point
+	- I don't like this option
 - [ ] Add an off option
-  - Since the script is being run over and over it could check for a switch
-    - Maybe a file on the desktop or something
+	- Since the script is being run over and over it could check for a switch
+	- Maybe a file on the desktop or something
 - [ ] Make a wiki to breakup the READMEs
-  - Hardware suggestions page
-  - Installation page
-  - Configurables
+	- Hardware suggestions page
+	- Installation page
+	- Configurable's
 - [ ] config.py automatically assigning username
-  - could easily get `whoami` into a var to build the logoff command with
+	- could easily get `whoami` into a var to build the logoff command with
 - [ ] Can the plist be loaded from a `ln`?
-  - This would allow the plist to then live in the repo directory
+	- This would allow the plist to then live in the repo directory
 - [ ] Is there any long term damage from having the log files?
-  - Should the automatically cleanup?
+	- Should the automatically cleanup?
 - [ ] Could installation be turned into a script or makefile?
 - [ ] Branch the current project and go back to a 'keep alive' plist
-  - The interval plist doesn't run quickly enough
-  - [ ] Go back to a while loop with delay
+	- The interval plist doesn't run quickly enough
+	- [ ] Go back to a while loop with delay
 - [ ] ISSUE: it appears when the computer falls asleep it will trigger the logout event.
-  - I don't know if it is a certain duration after maybe locking. Where the script could check to see if computer is locked and stop running script?
+	- I don't know if it is a certain duration after maybe locking. Where the script could check to see if computer is locked and stop running script?
