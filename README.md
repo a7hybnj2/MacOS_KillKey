@@ -2,13 +2,11 @@
 
 This project allows you to have a physical 'key' connected to your computer. When that key is removed the computer will quickly logout keeping your data safe.
 
-beep
-
 ## Contributing
 
 I would be very happy if someone was interested in taking a look at this and suggesting improvements. This is one of my first python projects and is my first time using plists to start scripts.
 
-## Installation and Setup
+## Installation and Setup TODO: revise install procedure
 
 1. Clone or download this repo to your computer
 2. Open the repo and copy the two .example files and remove the .example extension
@@ -65,6 +63,13 @@ This is not a ['USB KILL'](https://usbkill.com/). This script will do no damage 
 - Does this cause: `error: gpg failed to sign the data`?
 	- It seems to mess it up somehow. Probably because of the 'FORCE' logout.
 	- Run `gpgconf --kill gpg-agent` and it should reload and work again.
+
+## Hardware
+
+- `magnetic 20-pin usb-c adapter` is a good starting search string.
+	- I found mine on aliexpress for about $6 shipped. When I got them they were branded 'Upmely'.
+- just buy the smallest, in both dimensions and capacity, usb drive you can find.
+	- I bought the SanDisk Ultra 16GB on Amazon for $7.
 
 ## TODO
 
