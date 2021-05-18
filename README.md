@@ -81,7 +81,7 @@ This is not a [BAD USB](https://maltronics.com/collections/malduinos) type devic
 	- If you have setup the script to automatically run you will probably need to boot into safe mode and stop it.
 	- I haven't actually tested this.
 - Is there recommended hardware?
-	- [see: Hardware below](##Hardware)
+	- [see: Hardware below](#hardware)
 - Does this cause: `error: gpg failed to sign the data`?
 	- Yes. I have this error after using the KillKey
 	- Run `gpgconf --kill gpg-agent` and it should reload and work again.
