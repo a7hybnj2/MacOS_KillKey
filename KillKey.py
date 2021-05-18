@@ -5,7 +5,7 @@ import getpass
 import pwd
 
 #Set this during setup. Prevents logoff and provides some feedback
-test = False
+test = True
 
 name = getpass.getuser()
 id = pwd.getpwnam(name).pw_uid
