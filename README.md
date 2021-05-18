@@ -4,53 +4,69 @@ This project allows you to have a physical 'key' connected to your computer. Whe
 
 ## Contributing
 
-I would be very happy if someone was interested in taking a look at this and suggesting improvements. This is one of my first python projects and is my first time using plists to start scripts.
+I would be very happy if someone was interested in taking a look at this and suggesting improvements.
 
-## Installation and Setup TODO: revise install procedure
-
-1. Clone or download this repo to your computer
-2. Open the repo and copy the two .example files and remove the .example extension
-3. Create the hardware 'key'
+## Setup
+1. The only file of importance is the KillKey.py
+2. Create the hardware 'key'
    1. Plug a thumb drive into your computer.
    2. Run in terminal `diskutil list`
    3. Note the path for your usb thumb drive
-   4. Run in terminal `diskutil eraseDisk free KillKey /YOUR_PATH_HERE`
+   4. Run in terminal `diskutil eraseDisk free KillKey /YOUR_PATH_FROM_PREVIOUS_STEP_HERE`
       - This will remove the filesystem from the disk and prevent it from showing up as a storage device. It will also prevent it from being mounted which means you will not get the "improperly ejected" warnings.
    5. Run in terminal `system_profiler SPUSBDataType`
-   6. Note the UUID listed for your USB Drive
-4. Edit config.py
+   6. Copy the UUID listed for your USB Drive
+   - This will lists more than just your USB Drive and you will have to find what your looking for.
+   - Mine looks like this:
+		```
+		USB X.X Bus
+			Host Controller Driver:
+			...
+			Bus Number:
+				...
+					Product ID:
+					...
+						...
+							Capacity:
+							...
+							Volumes:
+								EFI:
+									...
+									Volume UUID: 0E239BC6-F960-3107-89CF-1C97F78BB46B
+		```
+
+4. Edit KillKey.py
    1. Change `device_uuid` to your UUID you took note of earlier
-   2. Change `logout` so that `*username*` is replaced with your username
-5. **TEST**
-   1. Now you should be able to test to make sure you have your config.py setup correctly.
-   2. Open the repo in a terminal and `./KillKey.py`
-   3. If your drive is plugged in you will see `FOUND` in the stdout
-   4. If you have your drive removed and you run it you will see `NOT FOUND` very quickly before getting logged out of the system.
-6. Edit com.user.killkeyinterval.plist
-   1. Change the `<array><string>` to match your python install path
-   2. Change the `<array><string><string>` to match the path to the KillKey.py file.
-      - This cannot include globbing.
-   3. Change the `<key>StandardErrorPath</key><string>` to be in a location of your choosing.
-      - I kept mine inside the repo folder
-   4. Do the same for `<key>StandardErrorPath</key><string>`
-      - Keep the log filenames different unless you want both standard out and errors in one file.
-   5. Change `<integer>` to a the duration between running the script
-      - I am currently using `1` and am not having any negative issues as of now.
-7. Copy `com.user.killkeyinterval.plist` to `~/Library/LaunchAgents/`
-8. Run in terminal `launchctl load ~/Library/LaunchAgents/com.user.killkeyinterval`
-9. Logout
-10. Login
+		- Note: if you re-eraseDisk your UUID will change
+	2. There is a `test` variable you can set to `true` or `false`
+		- if `test`
+			- wont log you off
+			- wont loop
+			- provides feedback via term
 
-## Warning
+## Starting
+You will need to decide you to launch the script.  
+possible options include:
+	
+- create a `plist`
+	- Edit com.user.killkeyinterval.plist
+	- Copy `com.user.killkeyinterval.plist` to `~/Library/LaunchAgents/`
+	- TEST: Would a link work (ln)?
+	- Run in terminal `launchctl load ~/Library/LaunchAgents/com.user.killkeyinterval`
+	- logout / login
+- use `Script Editor` to make a startup app
+	- `do shell script "python /path/KillKey.py"`
+- manually open via terminal
+	- `python /path/KillKey.py`
 
-Once you have this installed you will have to have the 'key' installed to log into the machine. If you don't then as soon as you log in you will get logged back out. If you need to stop this you can `launchctl stop com.user.killkeyinterval` and/or `launchctl unload com.user.killkeyinterval` if you don't want it run again.
 
 ## Notes
 
 This is not a ['USB KILL'](https://usbkill.com/). This script will do no damage to your computer\*
 
-- haven't tested what would happen if you lost the 'key'  
-    This is not a ['BAD USB'](https://maltronics.com/collections/malduinos) type device.
+This is not a ['BAD USB'](https://maltronics.com/collections/malduinos) type device.
+
+*it might
 
 ## FAQ
 
@@ -73,6 +89,11 @@ This is not a ['USB KILL'](https://usbkill.com/). This script will do no damage 
 
 ## TODO
 
+- [ ] Change the name? I think KillKey might not what people expect a utility like this to be called.
+	- quitKey
+	- securityKey
+	- lanyardProtection
+	-  LogOffOMatic
 - [ ] Maybe an existing utility like fswatch could be used to monitor the filesystem.
 - [ ] Remove the startup plists. This can easily be started another way when the user wants the functionality. It could be an app or hot key or a number of other options.
 - [ ] Does the plist prevent sleep?
