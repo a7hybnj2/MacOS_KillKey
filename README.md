@@ -2,6 +2,12 @@
 
 This project allows you to have a physical 'key' connected to your computer. When that key is removed the computer will quickly logout keeping your data safe.
 
+Example Situation: You are out in pulic with your laptop at a cafe or similar. Some crazy person pops out of nowhere and grabs your laptop and is gone before you can get up.
+
+The thief knowing better leaves the lid of your laptop open and after a few minutes of running starts to go through your files. Because you were diligently working you have your password manager open and email and bank account and taxes and EVERYTHING!
+
+If you had the KillKey on a lanyard around your wrist, chair leg, or table leg while working on the laptop as soon as the thief picked up your laptop it would be locked. Not just locked but the FileVault would have been reenabled. Sure you laptop is stolen but at least thats all.
+
 ## Contributing
 
 I would be very happy if someone was interested in taking a look at this and suggesting improvements.
@@ -20,19 +26,19 @@ I would be very happy if someone was interested in taking a look at this and sug
    - Mine looks like this:
 		```
 		USB X.X Bus
-			Host Controller Driver:
-			...
-			Bus Number:
-				...
-					Product ID:
-					...
-						...
-							Capacity:
-							...
-							Volumes:
-								EFI:
-									...
-									Volume UUID: 0E239BC6-F960-3107-89CF-1C97F78BB46B
+		 Host Controller Driver:
+		 ...
+		  ...
+		   Product ID:
+		   ...
+		   Media:
+		    ...
+		     Capacity:
+		     ...
+		     Volumes:
+			  EFI:
+			   ...
+			   Volume UUID: 0E239BC6-F960-3107-89CF-1C97F78BB46B
 		```
 
 4. Edit KillKey.py
@@ -51,7 +57,6 @@ possible options include:
 - create a `plist`
 	- Edit com.user.killkeyinterval.plist
 	- Copy `com.user.killkeyinterval.plist` to `~/Library/LaunchAgents/`
-	- TEST: Would a link work (ln)?
 	- Run in terminal `launchctl load ~/Library/LaunchAgents/com.user.killkeyinterval`
 	- logout / login
 - use `Script Editor` to make a startup app
@@ -62,9 +67,9 @@ possible options include:
 
 ## Notes
 
-This is not a ['USB KILL'](https://usbkill.com/). This script will do no damage to your computer\*
+This is not a ['SB KILL](https://usbkill.com/). This script will do no damage to your computer\*
 
-This is not a ['BAD USB'](https://maltronics.com/collections/malduinos) type device.
+This is not a [BAD USB](https://maltronics.com/collections/malduinos) type device.
 
 *it might
 
@@ -73,11 +78,12 @@ This is not a ['BAD USB'](https://maltronics.com/collections/malduinos) type dev
 - Can I use the usb drive as a drive?
 	- Technically yes but not recommended.
 - What happens if I lose my key?
-	- Unknown, its **untested**.
+	- If you have setup the script to automatically run you will probably need to boot into safe mode and stop it.
+	- I haven't actually tested this.
 - Is there recommended hardware?
-	- There will be a wiki page on hardware.
+	- [see: Hardware below](##Hardware)
 - Does this cause: `error: gpg failed to sign the data`?
-	- It seems to mess it up somehow. Probably because of the 'FORCE' logout.
+	- Yes. I have this error after using the KillKey
 	- Run `gpgconf --kill gpg-agent` and it should reload and work again.
 
 ## Hardware
@@ -94,31 +100,9 @@ This is not a ['BAD USB'](https://maltronics.com/collections/malduinos) type dev
 	- securityKey
 	- lanyardProtection
 	-  LogOffOMatic
-- [ ] Maybe an existing utility like fswatch could be used to monitor the filesystem.
-- [ ] Remove the startup plists. This can easily be started another way when the user wants the functionality. It could be an app or hot key or a number of other options.
-- [ ] Does the plist prevent sleep?
-	- `pmset -g assertions` doesn't seem like it
-- [ ] Would [Monitoring a Directory](https://developer.apple.com/library/archive/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/CreatingLaunchdJobs.html#//apple_ref/doc/uid/10000172i-SW7-BCIEDDBJ) be a better option?
-	- /dev/disk#
-	- This could be good if you could somehow extrapolate the disk location from the UUID.
-	- /Volume/mount-point
-	- I don't like this option
-- [ ] Add an off option
-	- Since the script is being run over and over it could check for a switch
-	- Maybe a file on the desktop or something
-- [ ] Make a wiki to breakup the READMEs
-	- Hardware suggestions page
-	- Installation page
-	- Configurable's
-- [ ] config.py automatically assigning username
-	- could easily get `whoami` into a var to build the logoff command with
-- [ ] Can the plist be loaded from a `ln`?
-	- This would allow the plist to then live in the repo directory
-- [ ] Is there any long term damage from having the log files?
-	- Should the automatically cleanup?
-- [ ] Could installation be turned into a script or makefile?
-- [ ] Branch the current project and go back to a 'keep alive' plist
-	- The interval plist doesn't run quickly enough
-	- [ ] Go back to a while loop with delay
+- [ ] Can the plist or boot script be loaded from a `ln`?
+	- This would allow it to then live in the repo directory
 - [ ] ISSUE: it appears when the computer falls asleep it will trigger the logout event.
 	- I don't know if it is a certain duration after maybe locking. Where the script could check to see if computer is locked and stop running script?
+- [ ] Investigate a dedicated hardware solution.
+	- Doesn't seem work it since the hardware to make it work is already so cheap and small. And it 'looks' like a usb stick so doesn't raise suspicion.
