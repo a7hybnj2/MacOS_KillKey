@@ -67,7 +67,7 @@ possible options include:
 
 ## Notes
 
-This is not a ['SB KILL](https://usbkill.com/). This script will do no damage to your computer\*
+This is not a [USB KILL](https://usbkill.com/). This script will do no damage to your computer\*
 
 This is not a [BAD USB](https://maltronics.com/collections/malduinos) type device.
 
