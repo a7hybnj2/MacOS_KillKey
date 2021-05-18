@@ -76,3 +76,7 @@ Session.vim
 tags
 # Persistent undo
 [._]*.un~
+
+#vscode
+.markdownlint.json
+.vscode
