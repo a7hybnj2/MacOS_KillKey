@@ -3,9 +3,10 @@
 import os
 import getpass
 import pwd
+import time
 
 #Set this during setup. Prevents logoff and provides some feedback
-test = True
+test = False
 
 name = getpass.getuser()
 id = pwd.getpwnam(name).pw_uid
@@ -33,3 +34,4 @@ else:
 		# I need to put an event handler here for accepting ctrl+c
 		if os.system(the_command + " 2>/dev/null | grep -w " + device_uuid + " 1>/dev/null") != 0:
 			os.system(logout)
+		time.sleep(1)
