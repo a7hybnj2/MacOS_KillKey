@@ -99,7 +99,8 @@ This is not a [BAD USB](https://maltronics.com/collections/malduinos) type devic
 
 ## TODO
 
-- [ ] running in a while 1: gets things cooking. Need to make this check every few seconds not @ 4GHz
+- [x] running in a while 1: gets things cooking. Need to make this check every few seconds not @ 4GHz
+	- Just added a sleep(1)
 - [ ] Change the name? I think KillKey might not what people expect a utility like this to be called.
 	- quitKey
 	- securityKey
