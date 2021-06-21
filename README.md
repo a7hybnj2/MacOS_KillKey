@@ -3,6 +3,7 @@
 ## Neat Find:
 I was watching this [video](https://youtu.be/-a9UjN_37lg?t=63) from seytonic and he mentions the exact circumstance this utility is trying to prevent. Click the link to watch the blerb.
 
+## Description
 This project allows you to have a physical 'key' connected to your computer. When that key is removed the computer will quickly logout keeping your data safe.
 
 Example Situation: You are out in pulic with your laptop at a cafe or similar. Some crazy person pops out of nowhere and grabs your laptop and is gone before you can get up.
