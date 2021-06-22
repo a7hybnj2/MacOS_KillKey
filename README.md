@@ -112,4 +112,6 @@ This is not a [BAD USB](https://maltronics.com/collections/malduinos) type devic
 	- I don't know if it is a certain duration after maybe locking. Where the script could check to see if computer is locked and stop running script?
 - [ ] Investigate a dedicated hardware solution.
 	- Doesn't seem work it since the hardware to make it work is already so cheap and small. And it 'looks' like a usb stick so doesn't raise suspicion.
-- [ ] need to accept ctrl+c in the event this is manually run... or possibly something like 'if input is some password, shutdown script'
+- [ ] Need to accept ctrl+c in the event this is manually run... or possibly something like 'if input is some password, shutdown script'
+- [ ] Port to other OSes
+	- This would be trivial for linux but windows might be harder.
