@@ -1,3 +1,5 @@
+# 65D3FEBA Update
+This is depreciated. Please see: https://github.com/a7hybnj2/LockOMaticUSB
 # KillKey
 
 ## Neat Find:
